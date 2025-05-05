@@ -1,0 +1,1 @@
+console.log("This is the log and your javascript is successfully connected and active")
