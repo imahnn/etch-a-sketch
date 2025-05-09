@@ -1,7 +1,6 @@
 const container = document.querySelector(".container");
 let numberOfBoxes = 100;
 
-
 function createRow(){
     container.innerHTML = "";
     container.style.gridTemplateColumns = `repeat(${numberOfBoxes}, 1fr)`;
@@ -18,11 +17,16 @@ function createRow(){
 
 const changeGrid = document.querySelector(".changeGrid");
 changeGrid.addEventListener("click", e => {
-    userInput = prompt("Enter a number between 1 to 100");
-    newSize = parseInt(userInput);
-    numberOfBoxes = newSize;
-    console.log(numberOfBoxes);
-    createRow();
+    userInput = prompt("Enter any number from 1 to 100");
+    if (!isNaN(userInput) && userInput <= 100){
+        newSize = parseInt(userInput);
+        numberOfBoxes = newSize;
+        console.log(numberOfBoxes);
+        createRow();
+    }else{
+        alert("Invalid input, plese try again");
+    }
+
 })
 
 createRow();
