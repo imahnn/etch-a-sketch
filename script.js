@@ -1,5 +1,5 @@
 const container = document.querySelector(".container");
-let numberOfBoxes = 100;
+let numberOfBoxes = 16;
 
 function createRow(){
     container.innerHTML = "";
